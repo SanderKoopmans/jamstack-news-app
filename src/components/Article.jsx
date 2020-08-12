@@ -1,9 +1,13 @@
 import React from 'react';
 
-function Article() {
+function Article(props) {
+  // const { title } = props.title;
+  // const { description } = props.description;
+
   return (
     <div className="Article">
-      <h1>What The Twitter Breach Means</h1>
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
     </div>
   );
 }

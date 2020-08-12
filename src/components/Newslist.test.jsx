@@ -16,9 +16,8 @@ describe('tests for the newsApp', () => {
     const headerElement = getByText(/News/i);
     expect(headerElement).toBeInTheDocument();
   });
-  
-  // mysterious error, will spend time later to pinpoint what is going wrong.  
-  
+
+  // mysterious error, will spend time later to pinpoint what is going wrong.
   test('Rendering single article title from mock data', () => {
     const { getByText } = render(<Article />);
     const articleTitle = getByText(/What The Twitter Breach Means/i);
