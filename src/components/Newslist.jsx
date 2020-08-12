@@ -5,6 +5,7 @@ function Newslist() {
     <div className="newslist">
         <h1>Newslist</h1>
         <p>Test paragraph trying git conflict/merge</p>
+        <p>This is eemeli's thang.</p>
     </div>
   );
 }
