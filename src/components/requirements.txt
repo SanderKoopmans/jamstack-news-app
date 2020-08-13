@@ -1,0 +1,7 @@
+Test for rendering of header (maybe)
+render a single article div.
+Fill in article title and the first 20 words + link.
+Test if the hyperlinks are clickable. 
+add search box / form element
+check if searchbox eventhandler is working. 
+check if the div's contain related content.
