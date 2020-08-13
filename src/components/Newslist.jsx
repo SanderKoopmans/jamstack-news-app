@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Article from './Article';
 // import mockData from '../../server/mockData';
 
@@ -19,9 +20,14 @@ function Newslist() {
   return (
     <div className="newslist">
       <h1>Newslist</h1>
-      {<ul>
-        {articles.map((article, index) => <Article title={article.title} key={index} description={article.description} />)}
-      </ul>}
+      <ul>
+        {articles.map(article => (
+          <Article
+            title={article.title}
+            key={uuidv4()}
+            description={article.description} />
+        ))}
+      </ul>
     </div>
   );
 }
