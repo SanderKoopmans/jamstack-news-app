@@ -1,9 +1,7 @@
-function handler(event, context, callback) {
-  console.log('queryStringParameters', event.queryStringParameters);
-  callback(null, {
+exports.handler = async event => {
+  const subject = event.queryStringParameters.name || 'World'
+  return {
     statusCode: 200,
-    body: JSON.stringify({ msg: 'Hello, World!' }),
-  });
+    body: `Hello ${subject}!`,
+  }
 }
-
-export default handler;
