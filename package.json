@@ -17,7 +17,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:lambda": "netlify-lambda serve src/lambda",
     "build": "react-scripts build",
+    "build:lambda": "netlify-lambda build src/lambda",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.js*'"
@@ -38,6 +40,7 @@
     ]
   },
   "devDependencies": {
-    "netlify-cli": "^2.59.0"
+    "netlify-cli": "^2.59.0",
+    "netlify-lambda": "^2.0.1"
   }
 }
