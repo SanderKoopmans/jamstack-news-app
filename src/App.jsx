@@ -2,13 +2,15 @@ import React from 'react';
 import './App.css';
 import Newslist from './components/Newslist';
 import Article from './components/Article';
+import Lambda from './components/Lambda';
 
 function App() {
   return (
     <div className="App">
       <h1>News App</h1>
-      <Newslist />
-      <Article />
+      {/* <Newslist />
+      <Article /> */}
+      <Lambda />
     </div>
   );
 }
