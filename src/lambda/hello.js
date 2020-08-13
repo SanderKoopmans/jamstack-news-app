@@ -1,9 +1,8 @@
-function handler(event, context, callback) {
+// eslint-disable-next-line import/prefer-default-export
+export function handler(event, context, callback) {
   console.log('queryStringParameters', event.queryStringParameters);
   callback(null, {
     statusCode: 200,
     body: JSON.stringify({ msg: 'Hello, World!' }),
   });
 }
-
-export default handler;
