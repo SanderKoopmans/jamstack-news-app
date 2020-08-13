@@ -5,17 +5,15 @@ import Article from './Article';
 
 function Newslist() {
   const [articles, setArticles] = useState([]);
-  const apiKey = process.env.REACT_APP_API_KEY;
-  const articlesUrl = `http://newsapi.org/v2/everything?q=bitcoin&from=2020-08-13&sortBy=publishedAt&apiKey=${apiKey}`;
-
-  const fetchArticles = async () => {
-    const articleObject = await fetch(articlesUrl);
-    const data = await articleObject.json();
-    setArticles(data.articles);
-    console.log('articles from fetchArticles:', data.articles);
-  };
 
   useEffect(() => {
+    const apiKey = process.env.REACT_APP_API_KEY;
+    const articlesUrl = `http://newsapi.org/v2/everything?q=bitcoin&from=2020-08-13&sortBy=publishedAt&apiKey=${apiKey}`;
+    const fetchArticles = async () => {
+      const articleObject = await fetch(articlesUrl);
+      const data = await articleObject.json();
+      setArticles(data.articles);
+    };
     fetchArticles();
   }, []);
 
