@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default-member */
 import React from 'react';
 import './App.css';
 import Newslist from './components/Newslist';
@@ -8,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <h1>News App</h1>
-      {/* <Newslist />
-      <Article /> */}
+      <Newslist />
+      <Article />
       <Lambda />
     </div>
   );
